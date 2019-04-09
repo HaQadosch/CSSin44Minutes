@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="css/minireset.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animation.css">
+  <script defer src="js/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
   <title>Ranulf Istwel</title>
 </head>
 <body>
-  <div class="wallpaper"></div>
+  <div id="wallpaper" class="wallpaper" data-image='Images/hexMap.jpg'></div>
   <div class="content">
     <aside class="side">
-      <figure class="picture">
+      <figure id="picture" class="picture">
         <div class="picture-shadow"></div>
         <img
           id="pictureImage" class="picture-image"
@@ -48,5 +49,15 @@
       </ul>
     </main>
   </div>
+  <noscript>
+    <style>
+      .wallpaper {
+        animation-name: zoomOut;
+      }  
+      .picture {
+        animation-name: dropIn;
+      }
+    </style>
+  </noscript>
 </body>
 </html>
